@@ -57,3 +57,39 @@ class BaseCollectionReusableView: UICollectionReusableView {
     internal func initializeView() { }
 
 }
+
+ 
+extension UICollectionView {
+
+    func deselectAllItems(animated: Bool = false) {
+        for indexPath in self.indexPathsForSelectedItems ?? [] {
+            self.deselectItem(at: indexPath, animated: animated)
+        }
+    }
+
+    func registerCells<T: BaseCollectionViewCell>(_ instances: [T.Type]) {
+        for instance in instances {
+            self.registerCell(instance)
+        }
+    }
+    
+    func registerNibCell<T: BaseCollectionViewCell>(_ instance: T.Type) {
+        self.register(UINib(nibName:"\(instance.self)",bundle:nil), forCellWithReuseIdentifier: instance.reuseIdentifier)
+    }
+
+    func registerCell<T: BaseCollectionViewCell>(_ instance: T.Type) {
+        self.register(instance.self, forCellWithReuseIdentifier: instance.reuseIdentifier)
+    }
+
+    
+
+    func generateReusableCell<T: BaseCollectionViewCell>(_ instance: T.Type, indexPath: IndexPath) -> T {
+        guard let cell =
+            self.dequeueReusableCell(withReuseIdentifier: instance.reuseIdentifier, for: indexPath) as? T else {
+                fatalError("cell not found -> \(instance.reuseIdentifier)")
+        }
+
+        return cell
+    }
+
+}
