@@ -31,7 +31,7 @@ class NowPlayingCollectionViewCell: BaseCollectionViewCell {
         }
         
         labelDescription.text = movieModel.overview ?? ""
-        labelTitle.text = movieModel.title ?? ""
+        labelTitle.text = "\(movieModel.title ?? "") \(getYearOfMovie(text: movieModel.releaseDate))"
         
         imageViewMoviePoster.layer.cornerRadius = 10
         
@@ -79,5 +79,12 @@ private extension NowPlayingCollectionViewCell {
                 }
             }
         }
+    }
+    
+    func getYearOfMovie(text: String?) -> String {
+        if let text = text {
+            return "(\(text.split(separator: "-").first ?? ""))"
+        }
+        return ""
     }
 }

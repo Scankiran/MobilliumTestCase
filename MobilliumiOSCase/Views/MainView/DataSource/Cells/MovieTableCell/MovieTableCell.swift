@@ -33,7 +33,7 @@ class MovieTableCell: BaseTableViewCell {
             fetchMoviePoster(url: url)
         }
         
-        labelMovieTitle.text = baseMovieModel.title ?? ""
+        labelMovieTitle.text = "\(baseMovieModel.title ?? "") \(getYearOfMovie(text: baseMovieModel.releaseDate))"
         labelMovieOverview.text = baseMovieModel.overview ?? ""
         labelMovieDate.text = baseMovieModel.releaseDate ?? ""
         
@@ -95,6 +95,13 @@ private extension MovieTableCell {
                 }
             }
         }
+    }
+    
+    func getYearOfMovie(text: String?) -> String {
+        if let text = text {
+            return "(\(text.split(separator: "-").first ?? ""))"
+        }
+        return ""
     }
 }
 

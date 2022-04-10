@@ -47,31 +47,30 @@ class MovieDetailViewController: UIViewController {
         viewModel.movieId = movieId
     }
 
-    func fillTheViewComponents(with movieDetailModel: MovieDetailModel) {
-        if let url = movieDetailModel.posterPath {
-            fetchMoviePoster(url: url)
-        }
-        labelMovieTitleOnBar.text = movieDetailModel.title ?? ""
-        labelMovieTitle.text = movieDetailModel.title ?? ""
-        labelMovieOverview.text = movieDetailModel.overview ?? ""
-        labelMovieOverview.frame = CGRect(origin: labelMovieOverview.frame.origin,
-                                          size: CGSize(width: labelMovieOverview.frame.width,
-                                                       height: viewModel.calculateLabelHeight(text: movieDetailModel.overview ?? "",
-                                                                                              width: labelMovieOverview.frame.width)))
-        labelMovieReleaseDate.text = movieDetailModel.releaseDate ?? ""
-        labelMovieRatePoint.attributedText = viewModel.createPointLabelAttibutedString(text: "\(movieDetailModel.voteAverage ?? 0)")
-    }
-    
-    func handleTap() {
-        buttonCloseView.onTap { _ in
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-
 }
 
-private extension MovieDetailModel {
-
+ extension MovieDetailViewController {
+     
+     func fillTheViewComponents(with movieDetailModel: MovieDetailModel) {
+         if let url = movieDetailModel.posterPath {
+             fetchMoviePoster(url: url)
+         }
+         labelMovieTitleOnBar.text = "\(movieDetailModel.title ?? "") \(viewModel.getYearOfMovie(text: movieDetailModel.releaseDate))"
+         labelMovieTitle.text = "\(movieDetailModel.title ?? "") \(viewModel.getYearOfMovie(text: movieDetailModel.releaseDate))"
+         labelMovieOverview.text = movieDetailModel.overview ?? ""
+         labelMovieOverview.frame = CGRect(origin: labelMovieOverview.frame.origin,
+                                           size: CGSize(width: labelMovieOverview.frame.width,
+                                                        height: viewModel.calculateLabelHeight(text: movieDetailModel.overview ?? "",
+                                                                                               width: labelMovieOverview.frame.width)))
+         labelMovieReleaseDate.text = movieDetailModel.releaseDate ?? ""
+         labelMovieRatePoint.attributedText = viewModel.createPointLabelAttibutedString(text: "\(movieDetailModel.voteAverage ?? 0)")
+     }
+     
+     func handleTap() {
+         buttonCloseView.onTap { _ in
+             self.dismiss(animated: true, completion: nil)
+         }
+     }
 
 }
 

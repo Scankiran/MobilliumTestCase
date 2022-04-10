@@ -18,30 +18,39 @@ class MovieDetailViewModel {
 
     //MARK: Closures
     var sendDataToView: ((MovieDetailModel) -> ())?
-    
+
     func getMovieDetail() {
         movieNetwork.getMovieDetail(with: movieId) { [weak self] movieDetailModelResult in
             self?.sendDataToView?(movieDetailModelResult)
         }
     }
+
+    
+}
+
+//MARK: UI Functions
+extension MovieDetailViewModel {
     
     func calculateLabelHeight(text: String, width: CGFloat) -> CGFloat {
         return text.height(withConstrainedWidth: width, font: UIFont(name: "SF-Pro-Text-Regular.tff", size: 15) ?? .systemFont(ofSize: 15))
     }
-    
+
     func createPointLabelAttibutedString(text: String) -> NSAttributedString {
         let range = text.count
         var tempText = text
         tempText.append(contentsOf: "/10")
-        
+
         let mutableString = NSMutableAttributedString(string: tempText)
         mutableString.addAttribute(.foregroundColor, value: UIColor.gray, range: .init(location: 0, length: tempText.count))
         mutableString.addAttribute(.foregroundColor, value: UIColor.black, range: .init(location: 0, length: range))
-        
+
         return mutableString
     }
+
+    func getYearOfMovie(text: String?) -> String {
+        if let text = text {
+            return "(\(text.split(separator: "-").first ?? ""))"
+        }
+        return ""
+    }
 }
-
-
-
-
