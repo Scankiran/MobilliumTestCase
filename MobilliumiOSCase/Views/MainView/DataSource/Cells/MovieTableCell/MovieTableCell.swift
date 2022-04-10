@@ -1,54 +1,65 @@
 //
-//  NowPlayingCollectionViewCell.swift
+//  MovieTableCell.swift
 //  MobilliumiOSCase
 //
 //  Created by Said Çankıran on 10.04.2022.
 //
 
 import UIKit
-import Kingfisher
 
-protocol NowPlayingCollectionViewCellOutputDelegate: AnyObject {
+protocol MovieTableCellOutputDelegate: AnyObject {
     
-    func movieTapped(movieID: Int)
+    func movieTapped(id: Int)
 }
 
-class NowPlayingCollectionViewCell: BaseCollectionViewCell {
-
-    @IBOutlet private weak var mContentView: UIView!
+class MovieTableCell: BaseTableViewCell {
     
+    class override var defaultHeight: CGFloat {
+        return 136
+    }
+
     @IBOutlet private weak var imageViewMoviePoster: UIImageView!
-    @IBOutlet private weak var labelDescription: UILabel!
-    @IBOutlet private weak var labelTitle: UILabel!
+    @IBOutlet private weak var labelMovieTitle: UILabel!
+    @IBOutlet private weak var labelMovieOverview: UILabel!
+    @IBOutlet private weak var labelMovieDate: UILabel!
     
     private let activityIndicator = UIActivityIndicatorView()
     weak var outputDelegate: NowPlayingCollectionViewCellOutputDelegate?
     
-    func configureView(movieModel: BaseMovieModel) {
+    func configureView(baseMovieModel: BaseMovieModel) {
         
-        if let posterString = movieModel.posterPath {
-            fetchMoviePoster(url: posterString)
+        if let url = baseMovieModel.posterPath {
+            fetchMoviePoster(url: url)
         }
         
-        labelDescription.text = movieModel.overview ?? ""
-        labelTitle.text = movieModel.title ?? ""
+        labelMovieTitle.text = baseMovieModel.title ?? ""
+        labelMovieOverview.text = baseMovieModel.overview ?? ""
+        labelMovieDate.text = baseMovieModel.releaseDate ?? ""
         
-        handleTaps(movieId: movieModel.id)
+        labelMovieOverview.textColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
+        labelMovieDate.textColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
+        
+        handleTap(movieId: baseMovieModel.id)
     }
     
-    func handleTaps(movieId: Int?) {
-        if let id = movieId {
-            self.mContentView.onTap { _ in
+   
+}
+
+private extension MovieTableCell {
+    
+    func handleTap(movieId: Int?) {
+        if let movieId = movieId {
+            self.contentView.onTap { _ in
                 self.outputDelegate?.movieTapped(movieID: movieId)
             }
         }
         
     }
-    
 }
 
+
 // MARK: Private UI Extension
-private extension NowPlayingCollectionViewCell {
+private extension MovieTableCell {
     func showLoaderAnimation() {
         self.imageViewMoviePoster.addSubview(activityIndicator)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -79,3 +90,4 @@ private extension NowPlayingCollectionViewCell {
         }
     }
 }
+

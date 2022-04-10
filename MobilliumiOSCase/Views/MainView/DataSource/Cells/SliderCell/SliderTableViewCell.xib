@@ -17,6 +17,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-kF-8ni">
+                        <rect key="frame" x="171" y="237" width="33" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="Dvt-MY-2R5"/>
+                        </constraints>
+                    </pageControl>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0U6-bO-q82">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -30,14 +36,18 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="0U6-bO-q82" secondAttribute="bottom" id="6WK-f7-6mG"/>
+                    <constraint firstItem="WeN-kF-8ni" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="DAR-Li-HRg"/>
                     <constraint firstItem="0U6-bO-q82" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NCz-8B-6fJ"/>
                     <constraint firstAttribute="trailing" secondItem="0U6-bO-q82" secondAttribute="trailing" id="UUH-ND-c9G"/>
+                    <constraint firstItem="WeN-kF-8ni" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="151" id="UxV-pn-N4a"/>
                     <constraint firstItem="0U6-bO-q82" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="km3-ad-RGX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WeN-kF-8ni" secondAttribute="trailing" constant="151" id="vXH-rQ-1rl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="0U6-bO-q82" id="oF0-yA-Nkz"/>
+                <outlet property="pageControl" destination="WeN-kF-8ni" id="R75-Dx-BnL"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="171.76339285714286"/>
         </tableViewCell>
