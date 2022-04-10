@@ -44,6 +44,7 @@ class MainViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.row == 0, !playingNowMovieData.isEmpty {
             let cell = tableView.generateReusableCell(SliderTableViewCell.self, indexPath: indexPath)
             cell.outputDelegate = self
@@ -84,7 +85,6 @@ extension MainViewDataSource: SliderTableViewCellOutputDelegate, MovieTableCellO
     }
     
 }
-
 
 enum DataType {
     case playingNow

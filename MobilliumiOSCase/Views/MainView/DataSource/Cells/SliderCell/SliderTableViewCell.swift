@@ -31,7 +31,6 @@ class SliderTableViewCell: BaseTableViewCell {
         
     }
 
-
 }
 
 private extension SliderTableViewCell {

@@ -39,7 +39,8 @@ class MainViewController: UIViewController {
             self?.refreshControl.endRefreshing()
         }
         
-        viewModel.getMovieDatas(isRefresh: false, pageCount: 1)
+        // Check connection 
+        Reachability.isConnectedToNetwork() ? viewModel.getMovieDatas(isRefresh: false, pageCount: 1) : showConnectionAlert()
     }
 
 
@@ -62,6 +63,15 @@ private extension MainViewController {
 
     @objc func refresh(_ sender: AnyObject) {
         viewModel.getMovieDatas(isRefresh: true, pageCount: 1)
+    }
+    
+    func showConnectionAlert() {
+        let uiAlert = UIAlertController(title: "No Connection", message: "Please check your connection", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Okey", style: .default) { [unowned self] _ in
+            Reachability.isConnectedToNetwork() ? self.viewModel.getMovieDatas(isRefresh: false, pageCount: 1) : self.showConnectionAlert()
+        }
+        uiAlert.addAction(action)
+        self.present(uiAlert, animated: true)
     }
 }
 

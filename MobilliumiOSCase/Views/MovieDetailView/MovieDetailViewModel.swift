@@ -39,9 +39,10 @@ extension MovieDetailViewModel {
         let range = text.count
         var tempText = text
         tempText.append(contentsOf: "/10")
+        let grayColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
 
         let mutableString = NSMutableAttributedString(string: tempText)
-        mutableString.addAttribute(.foregroundColor, value: UIColor.gray, range: .init(location: 0, length: tempText.count))
+        mutableString.addAttribute(.foregroundColor, value: grayColor, range: .init(location: 0, length: tempText.count))
         mutableString.addAttribute(.foregroundColor, value: UIColor.black, range: .init(location: 0, length: range))
 
         return mutableString

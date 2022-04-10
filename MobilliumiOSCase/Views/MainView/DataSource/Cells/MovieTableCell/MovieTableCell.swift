@@ -25,6 +25,7 @@ class MovieTableCell: BaseTableViewCell {
     @IBOutlet private weak var buttonOpenMovieDetail: UIButton!
     
     private let activityIndicator = UIActivityIndicatorView()
+    private let grayColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
     weak var outputDelegate: MovieTableCellOutputDelegate?
     
     func configureView(baseMovieModel: BaseMovieModel) {
@@ -37,8 +38,8 @@ class MovieTableCell: BaseTableViewCell {
         labelMovieOverview.text = baseMovieModel.overview ?? ""
         labelMovieDate.text = baseMovieModel.releaseDate ?? ""
         
-        labelMovieOverview.textColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
-        labelMovieDate.textColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
+        labelMovieOverview.textColor = grayColor
+        labelMovieDate.textColor = grayColor
         
         imageViewMoviePoster.layer.cornerRadius = 10
         

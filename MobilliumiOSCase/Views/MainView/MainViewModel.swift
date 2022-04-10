@@ -18,9 +18,11 @@ class MainViewModel {
     //MARK: Closures
     var sendDataToView: (([BaseMovieModel], [BaseMovieModel]) -> ())?
 
+    
+    // Fetch playing now and up coming movie data.
+    // If isRefresh true, local movie data will be cleared.
     func getMovieDatas(isRefresh: Bool, pageCount: Int) {
         let dispatchGroup = DispatchGroup()
-
 
         dispatchGroup.enter()
         movieNetwork.getPlayingNow { [weak self] responseModel in
