@@ -54,8 +54,12 @@ class MovieDetailViewController: UIViewController {
         labelMovieTitleOnBar.text = movieDetailModel.title ?? ""
         labelMovieTitle.text = movieDetailModel.title ?? ""
         labelMovieOverview.text = movieDetailModel.overview ?? ""
+        labelMovieOverview.frame = CGRect(origin: labelMovieOverview.frame.origin,
+                                          size: CGSize(width: labelMovieOverview.frame.width,
+                                                       height: viewModel.calculateLabelHeight(text: movieDetailModel.overview ?? "",
+                                                                                              width: labelMovieOverview.frame.width)))
         labelMovieReleaseDate.text = movieDetailModel.releaseDate ?? ""
-        labelMovieRatePoint.text = "\(movieDetailModel.voteAverage ?? 0)"
+        labelMovieRatePoint.attributedText = viewModel.createPointLabelAttibutedString(text: "\(movieDetailModel.voteAverage ?? 0)")
     }
     
     func handleTap() {

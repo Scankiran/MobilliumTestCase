@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5D3B6C280342E60011B8E4 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D3B63280342E50011B8E4 /* SF-Pro-Text-Regular.otf */; };
+		2C5D3B6D280342E60011B8E4 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D3B64280342E50011B8E4 /* SF-Pro-Text-Bold.otf */; };
+		2C5D3B71280342E60011B8E4 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D3B68280342E60011B8E4 /* SF-Pro-Text-Medium.otf */; };
 		2C9236EB2803110600754E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9236EA2803110600754E2E /* AppDelegate.swift */; };
 		2C9236F42803110900754E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9236F32803110900754E2E /* Assets.xcassets */; };
 		2C9236F72803110900754E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9236F52803110900754E2E /* LaunchScreen.storyboard */; };
@@ -30,10 +33,14 @@
 		2C92373728031D3000754E2E /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92373628031D3000754E2E /* BaseCollectionViewCell.swift */; };
 		2C92373A280322B900754E2E /* MovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923738280322B900754E2E /* MovieTableCell.swift */; };
 		2C92373B280322B900754E2E /* MovieTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C923739280322B900754E2E /* MovieTableCell.xib */; };
+		2C92373E2803419700754E2E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92373D2803419700754E2E /* String+Extensions.swift */; };
 		BF802190D84A3E6182094603 /* Pods_MobilliumiOSCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2409F37A96D64D346C84FD1 /* Pods_MobilliumiOSCase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C5D3B63280342E50011B8E4 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		2C5D3B64280342E50011B8E4 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		2C5D3B68280342E60011B8E4 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		2C9236E72803110600754E2E /* MobilliumiOSCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilliumiOSCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9236EA2803110600754E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9236F32803110900754E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 		2C92373628031D3000754E2E /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C923738280322B900754E2E /* MovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCell.swift; sourceTree = "<group>"; };
 		2C923739280322B900754E2E /* MovieTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableCell.xib; sourceTree = "<group>"; };
+		2C92373D2803419700754E2E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8D546811818A6CE2EBFF4A09 /* Pods-MobilliumiOSCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumiOSCase.release.xcconfig"; path = "Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase.release.xcconfig"; sourceTree = "<group>"; };
 		98E0275FB0B492BE346BE117 /* Pods-MobilliumiOSCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumiOSCase.debug.xcconfig"; path = "Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase.debug.xcconfig"; sourceTree = "<group>"; };
 		A2409F37A96D64D346C84FD1 /* Pods_MobilliumiOSCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilliumiOSCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +110,7 @@
 				2C9237012803127900754E2E /* Data */,
 				2C9237022803128E00754E2E /* Views */,
 				2C9237032803129600754E2E /* Components */,
+				2C92373C2803416700754E2E /* Extensions */,
 			);
 			path = MobilliumiOSCase;
 			sourceTree = "<group>";
@@ -118,6 +127,7 @@
 		2C9236FF2803126D00754E2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C92373F280341BD00754E2E /* Font */,
 				2C9236F32803110900754E2E /* Assets.xcassets */,
 				2C9236F52803110900754E2E /* LaunchScreen.storyboard */,
 			);
@@ -237,6 +247,24 @@
 			path = NowPlayingMovieCell;
 			sourceTree = "<group>";
 		};
+		2C92373C2803416700754E2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C92373D2803419700754E2E /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C92373F280341BD00754E2E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2C5D3B64280342E50011B8E4 /* SF-Pro-Text-Bold.otf */,
+				2C5D3B68280342E60011B8E4 /* SF-Pro-Text-Medium.otf */,
+				2C5D3B63280342E50011B8E4 /* SF-Pro-Text-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		6A6A39D919BC7B6AF4BECF97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +346,10 @@
 				2C92373028031B5A00754E2E /* SliderTableViewCell.xib in Resources */,
 				2C92373528031D0500754E2E /* NowPlayingCollectionViewCell.xib in Resources */,
 				2C9236F72803110900754E2E /* LaunchScreen.storyboard in Resources */,
+				2C5D3B6D280342E60011B8E4 /* SF-Pro-Text-Bold.otf in Resources */,
 				2C9237122803148300754E2E /* MainViewController.xib in Resources */,
+				2C5D3B71280342E60011B8E4 /* SF-Pro-Text-Medium.otf in Resources */,
+				2C5D3B6C280342E60011B8E4 /* SF-Pro-Text-Regular.otf in Resources */,
 				2C9236F42803110900754E2E /* Assets.xcassets in Resources */,
 				2C92373B280322B900754E2E /* MovieTableCell.xib in Resources */,
 			);
@@ -385,6 +416,7 @@
 				2C923717280314C100754E2E /* MovieDetailViewController.swift in Sources */,
 				2C92372C28031B1000754E2E /* MainViewDataSource.swift in Sources */,
 				2C923726280317DA00754E2E /* BaseMovieModel.swift in Sources */,
+				2C92373E2803419700754E2E /* String+Extensions.swift in Sources */,
 				2C92371A280314CE00754E2E /* MovieDetailViewModel.swift in Sources */,
 				2C923722280315BB00754E2E /* Reachability.swift in Sources */,
 				2C92372A280318F800754E2E /* MovieDetailModel.swift in Sources */,
