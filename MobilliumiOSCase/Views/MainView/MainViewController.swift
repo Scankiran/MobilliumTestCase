@@ -36,6 +36,7 @@ class MainViewController: UIViewController {
             self?.dataSource?.updateDataSource(playingNowMovieData: playingNowData)
             self?.dataSource?.updateDataSource(upComingMovieData: upComingData)
             self?.tableView.reloadData()
+            self?.refreshControl.endRefreshing()
         }
         
         viewModel.getMovieDatas()

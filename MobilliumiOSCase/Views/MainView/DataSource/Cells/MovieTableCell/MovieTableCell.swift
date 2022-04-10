@@ -40,6 +40,8 @@ class MovieTableCell: BaseTableViewCell {
         labelMovieOverview.textColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
         labelMovieDate.textColor = UIColor(red: 141.0 / 255.0, green: 153.0 / 255.0, blue: 174.0 / 255.0, alpha: 1)
         
+        imageViewMoviePoster.layer.cornerRadius = 10
+        
         handleTap(movieId: baseMovieModel.id)
     }
     

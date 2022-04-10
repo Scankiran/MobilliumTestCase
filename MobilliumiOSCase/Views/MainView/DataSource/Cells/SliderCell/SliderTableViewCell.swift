@@ -43,13 +43,20 @@ private extension SliderTableViewCell {
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
     }
+    
+    func initializePageControl() {
+        pageControl.numberOfPages = 5
+        pageControl.pageIndicatorTintColor = .gray
+        pageControl.currentPageIndicatorTintColor = .white
+        pageControl.backgroundColor = .blue
+    }
 }
 
 // MARK: UICollectionViewDelegates
 extension SliderTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieData.count
+        return 5
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

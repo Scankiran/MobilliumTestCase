@@ -33,6 +33,8 @@ class NowPlayingCollectionViewCell: BaseCollectionViewCell {
         labelDescription.text = movieModel.overview ?? ""
         labelTitle.text = movieModel.title ?? ""
         
+        imageViewMoviePoster.layer.cornerRadius = 10
+        
         handleTaps(movieId: movieModel.id)
     }
     
