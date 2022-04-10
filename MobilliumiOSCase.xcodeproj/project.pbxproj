@@ -8,18 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		2C9236EB2803110600754E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9236EA2803110600754E2E /* AppDelegate.swift */; };
-		2C9236EF2803110600754E2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9236EE2803110600754E2E /* ViewController.swift */; };
 		2C9236F42803110900754E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9236F32803110900754E2E /* Assets.xcassets */; };
 		2C9236F72803110900754E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9236F52803110900754E2E /* LaunchScreen.storyboard */; };
+		2C9237062803140000754E2E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9237052803140000754E2E /* BaseTableViewCell.swift */; };
+		2C9237082803140E00754E2E /* CustomGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9237072803140E00754E2E /* CustomGestureHandler.swift */; };
+		2C9237112803148300754E2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92370F2803148300754E2E /* MainViewController.swift */; };
+		2C9237122803148300754E2E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9237102803148300754E2E /* MainViewController.xib */; };
+		2C9237142803149200754E2E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9237132803149200754E2E /* MainViewModel.swift */; };
+		2C923717280314C100754E2E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923715280314C100754E2E /* MovieDetailViewController.swift */; };
+		2C923718280314C100754E2E /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C923716280314C100754E2E /* MovieDetailViewController.xib */; };
+		2C92371A280314CE00754E2E /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923719280314CE00754E2E /* MovieDetailViewModel.swift */; };
+		2C923722280315BB00754E2E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923721280315BB00754E2E /* Reachability.swift */; };
+		BF802190D84A3E6182094603 /* Pods_MobilliumiOSCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2409F37A96D64D346C84FD1 /* Pods_MobilliumiOSCase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C9236E72803110600754E2E /* MobilliumiOSCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilliumiOSCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9236EA2803110600754E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C9236EE2803110600754E2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C9236F32803110900754E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9236F62803110900754E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9236F82803110900754E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C9237052803140000754E2E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		2C9237072803140E00754E2E /* CustomGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGestureHandler.swift; sourceTree = "<group>"; };
+		2C92370F2803148300754E2E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2C9237102803148300754E2E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		2C9237132803149200754E2E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2C923715280314C100754E2E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		2C923716280314C100754E2E /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		2C923719280314CE00754E2E /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		2C923721280315BB00754E2E /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8D546811818A6CE2EBFF4A09 /* Pods-MobilliumiOSCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumiOSCase.release.xcconfig"; path = "Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase.release.xcconfig"; sourceTree = "<group>"; };
+		98E0275FB0B492BE346BE117 /* Pods-MobilliumiOSCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumiOSCase.debug.xcconfig"; path = "Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase.debug.xcconfig"; sourceTree = "<group>"; };
+		A2409F37A96D64D346C84FD1 /* Pods_MobilliumiOSCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilliumiOSCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF802190D84A3E6182094603 /* Pods_MobilliumiOSCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +59,8 @@
 			children = (
 				2C9236E92803110600754E2E /* MobilliumiOSCase */,
 				2C9236E82803110600754E2E /* Products */,
+				709FB873B9C3492177329F44 /* Pods */,
+				6A6A39D919BC7B6AF4BECF97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +79,6 @@
 				2C9236FF2803126D00754E2E /* Resources */,
 				2C9237012803127900754E2E /* Data */,
 				2C9237022803128E00754E2E /* Views */,
-				2C9237042803129A00754E2E /* Extensions */,
 				2C9237032803129600754E2E /* Components */,
 			);
 			path = MobilliumiOSCase;
@@ -83,6 +105,8 @@
 		2C9237012803127900754E2E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2C92371B280314E900754E2E /* Network */,
+				2C92371C280314F400754E2E /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -90,7 +114,8 @@
 		2C9237022803128E00754E2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C9236EE2803110600754E2E /* ViewController.swift */,
+				2C92370E2803146D00754E2E /* MovieDetailView */,
+				2C92370D2803146100754E2E /* MainView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,15 +123,94 @@
 		2C9237032803129600754E2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2C9237052803140000754E2E /* BaseTableViewCell.swift */,
+				2C9237072803140E00754E2E /* CustomGestureHandler.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		2C9237042803129A00754E2E /* Extensions */ = {
+		2C92370D2803146100754E2E /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				2C92371D2803150800754E2E /* DataSource */,
+				2C9237132803149200754E2E /* MainViewModel.swift */,
+				2C92370F2803148300754E2E /* MainViewController.swift */,
+				2C9237102803148300754E2E /* MainViewController.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		2C92370E2803146D00754E2E /* MovieDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2C923719280314CE00754E2E /* MovieDetailViewModel.swift */,
+				2C923715280314C100754E2E /* MovieDetailViewController.swift */,
+				2C923716280314C100754E2E /* MovieDetailViewController.xib */,
+			);
+			path = MovieDetailView;
+			sourceTree = "<group>";
+		};
+		2C92371B280314E900754E2E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2C923721280315BB00754E2E /* Reachability.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2C92371C280314F400754E2E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Extensions;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C92371D2803150800754E2E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2C92371E2803150D00754E2E /* Cells */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		2C92371E2803150D00754E2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2C92371F2803151200754E2E /* SliderCell */,
+				2C9237202803151700754E2E /* MovieTableCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2C92371F2803151200754E2E /* SliderCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SliderCell;
+			sourceTree = "<group>";
+		};
+		2C9237202803151700754E2E /* MovieTableCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieTableCell;
+			sourceTree = "<group>";
+		};
+		6A6A39D919BC7B6AF4BECF97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2409F37A96D64D346C84FD1 /* Pods_MobilliumiOSCase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		709FB873B9C3492177329F44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98E0275FB0B492BE346BE117 /* Pods-MobilliumiOSCase.debug.xcconfig */,
+				8D546811818A6CE2EBFF4A09 /* Pods-MobilliumiOSCase.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C9236FB2803110900754E2E /* Build configuration list for PBXNativeTarget "MobilliumiOSCase" */;
 			buildPhases = (
+				3ABDD07D51DBF6CA5E645B6D /* [CP] Check Pods Manifest.lock */,
 				2C9236E32803110600754E2E /* Sources */,
 				2C9236E42803110600754E2E /* Frameworks */,
 				2C9236E52803110600754E2E /* Resources */,
+				CB76C64C1F05B5F93F332532 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,20 +273,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C923718280314C100754E2E /* MovieDetailViewController.xib in Resources */,
 				2C9236F72803110900754E2E /* LaunchScreen.storyboard in Resources */,
+				2C9237122803148300754E2E /* MainViewController.xib in Resources */,
 				2C9236F42803110900754E2E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3ABDD07D51DBF6CA5E645B6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobilliumiOSCase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB76C64C1F05B5F93F332532 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C9236E32803110600754E2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9236EF2803110600754E2E /* ViewController.swift in Sources */,
+				2C9237142803149200754E2E /* MainViewModel.swift in Sources */,
+				2C9237082803140E00754E2E /* CustomGestureHandler.swift in Sources */,
+				2C9237062803140000754E2E /* BaseTableViewCell.swift in Sources */,
 				2C9236EB2803110600754E2E /* AppDelegate.swift in Sources */,
+				2C923717280314C100754E2E /* MovieDetailViewController.swift in Sources */,
+				2C92371A280314CE00754E2E /* MovieDetailViewModel.swift in Sources */,
+				2C923722280315BB00754E2E /* Reachability.swift in Sources */,
+				2C9237112803148300754E2E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +472,7 @@
 		};
 		2C9236FC2803110900754E2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E0275FB0B492BE346BE117 /* Pods-MobilliumiOSCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +501,7 @@
 		};
 		2C9236FD2803110900754E2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D546811818A6CE2EBFF4A09 /* Pods-MobilliumiOSCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
