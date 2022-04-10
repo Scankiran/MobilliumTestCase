@@ -11,7 +11,7 @@ protocol TableViewDataSourceOutputDelegate: AnyObject {
     func openMovieDetailPage(with ID:Int)
 }
 
-class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
+class MainViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     private var playingNowMovieData: [BaseMovieModel] = []
     private var upComingMovieData: [BaseMovieModel] = []
@@ -63,7 +63,7 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
 }
 
 // MARK: BaseMovieInformationCellOutputDelegate
-extension TableViewDataSource: SliderTableViewCellOutputDelegate, MovieTableCellOutputDelegate {
+extension MainViewDataSource: SliderTableViewCellOutputDelegate, MovieTableCellOutputDelegate {
     func sliderMovieTapped(movieId: Int) {
         self.outputDelegate?.openMovieDetailPage(with: movieId)
     }
