@@ -19,6 +19,9 @@
 		2C923718280314C100754E2E /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C923716280314C100754E2E /* MovieDetailViewController.xib */; };
 		2C92371A280314CE00754E2E /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923719280314CE00754E2E /* MovieDetailViewModel.swift */; };
 		2C923722280315BB00754E2E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923721280315BB00754E2E /* Reachability.swift */; };
+		2C9237242803163500754E2E /* MovieAPINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9237232803163500754E2E /* MovieAPINetwork.swift */; };
+		2C923726280317DA00754E2E /* BaseMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923725280317DA00754E2E /* BaseMovieModel.swift */; };
+		2C92372A280318F800754E2E /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C923729280318F800754E2E /* MovieDetailModel.swift */; };
 		BF802190D84A3E6182094603 /* Pods_MobilliumiOSCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2409F37A96D64D346C84FD1 /* Pods_MobilliumiOSCase.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		2C923716280314C100754E2E /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		2C923719280314CE00754E2E /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		2C923721280315BB00754E2E /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2C9237232803163500754E2E /* MovieAPINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPINetwork.swift; sourceTree = "<group>"; };
+		2C923725280317DA00754E2E /* BaseMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMovieModel.swift; sourceTree = "<group>"; };
+		2C923729280318F800754E2E /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		8D546811818A6CE2EBFF4A09 /* Pods-MobilliumiOSCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumiOSCase.release.xcconfig"; path = "Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase.release.xcconfig"; sourceTree = "<group>"; };
 		98E0275FB0B492BE346BE117 /* Pods-MobilliumiOSCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumiOSCase.debug.xcconfig"; path = "Target Support Files/Pods-MobilliumiOSCase/Pods-MobilliumiOSCase.debug.xcconfig"; sourceTree = "<group>"; };
 		A2409F37A96D64D346C84FD1 /* Pods_MobilliumiOSCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilliumiOSCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				2C923721280315BB00754E2E /* Reachability.swift */,
+				2C9237232803163500754E2E /* MovieAPINetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -161,6 +168,8 @@
 		2C92371C280314F400754E2E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C923725280317DA00754E2E /* BaseMovieModel.swift */,
+				2C923729280318F800754E2E /* MovieDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,12 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9237142803149200754E2E /* MainViewModel.swift in Sources */,
+				2C9237242803163500754E2E /* MovieAPINetwork.swift in Sources */,
 				2C9237082803140E00754E2E /* CustomGestureHandler.swift in Sources */,
 				2C9237062803140000754E2E /* BaseTableViewCell.swift in Sources */,
 				2C9236EB2803110600754E2E /* AppDelegate.swift in Sources */,
 				2C923717280314C100754E2E /* MovieDetailViewController.swift in Sources */,
+				2C923726280317DA00754E2E /* BaseMovieModel.swift in Sources */,
 				2C92371A280314CE00754E2E /* MovieDetailViewModel.swift in Sources */,
 				2C923722280315BB00754E2E /* Reachability.swift in Sources */,
+				2C92372A280318F800754E2E /* MovieDetailModel.swift in Sources */,
 				2C9237112803148300754E2E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
