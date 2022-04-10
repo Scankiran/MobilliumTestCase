@@ -67,7 +67,10 @@ private extension MainViewController {
 
 extension MainViewController: TableViewDataSourceOutputDelegate {
     func openMovieDetailPage(with ID: Int) {
-
+        let movieDetailViewController = MovieDetailViewController()
+        movieDetailViewController.setMovieIdToViewModel(movieId: ID)
+        movieDetailViewController.modalPresentationStyle = .fullScreen
+        self.present(movieDetailViewController, animated: true, completion: nil)
     }
 
 }

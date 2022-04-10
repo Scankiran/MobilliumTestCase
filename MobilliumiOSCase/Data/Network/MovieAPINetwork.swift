@@ -28,6 +28,8 @@ class MovieAPINetwork {
             if let responseValue = result.value {
                 ProgressHUD.dismiss()
                 completion(responseValue)
+            } else {
+                ProgressHUD.showError(result.error?.localizedDescription, image: nil, interaction: false)
             }
         })
     }
@@ -48,6 +50,8 @@ class MovieAPINetwork {
 
                 ProgressHUD.dismiss()
                 completion(responseValue)
+            } else {
+                ProgressHUD.showError(result.error?.localizedDescription, image: nil, interaction: false)
             }
         })
     }
@@ -66,6 +70,8 @@ class MovieAPINetwork {
                 if let responseValue = result.value {
                     ProgressHUD.dismiss()
                     completion(responseValue)
+                } else {
+                    ProgressHUD.showError(result.error?.localizedDescription, image: nil, interaction: false)
                 }
             })
         }

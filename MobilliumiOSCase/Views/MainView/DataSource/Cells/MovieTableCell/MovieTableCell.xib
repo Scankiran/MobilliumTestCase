@@ -57,7 +57,7 @@
                             <constraint firstAttribute="height" constant="20" id="yTh-S3-vts"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" backgroundImage="Arrow_Icon"/>
+                        <state key="normal" backgroundImage="arrow_icon"/>
                     </button>
                 </subviews>
                 <constraints>
@@ -88,6 +88,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Arrow_Icon" width="12" height="12"/>
+        <image name="arrow_icon" width="12" height="12"/>
     </resources>
 </document>
