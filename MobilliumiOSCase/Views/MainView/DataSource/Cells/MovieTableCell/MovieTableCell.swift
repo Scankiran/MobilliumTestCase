@@ -79,7 +79,7 @@ private extension MovieTableCell {
     }
     
     func fetchMoviePoster(url:String) {
-        if let url = URL(string: url) {
+        if let url = URL(string: "http://image.tmdb.org/t/p/w185/\(url)") {
             showLoaderAnimation()
             imageViewMoviePoster.kf.setImage(with: url) { result in
                 self.hideLoaderAnimation()

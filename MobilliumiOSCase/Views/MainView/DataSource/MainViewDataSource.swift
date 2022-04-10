@@ -34,7 +34,10 @@ class MainViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return upComingMovieData.count + playingNowMovieData.count
+        if playingNowMovieData.isEmpty {
+           return 0
+        }
+        return upComingMovieData.count + 1
         
     }
 
@@ -48,7 +51,7 @@ class MainViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.generateReusableCell(MovieTableCell.self, indexPath: indexPath)
         cell.outputDelegate = self
-        cell.configureView(baseMovieModel: upComingMovieData[indexPath.row])
+        cell.configureView(baseMovieModel: upComingMovieData[indexPath.row - 1])
         return cell
     }
 

@@ -12,16 +12,16 @@ import Alamofire
 class MovieAPINetwork {
     
     private let apiKey = "99fe6c6ab1a8bc88bd754ff5aa598e23"
-    private let baseUrl = "https://api.themoviedb.org/3/movie"
+    private let baseUrl = "https://api.themoviedb.org/3/movie/"
     
     func getUpComingMovies(completion: @escaping ((BaseMovieDataResponseModel) -> Void)) {
         ProgressHUD.show()
 
         let parameters: [String: String] = [
-            "apiKey": apiKey
+            "api_key": apiKey
         ]
         
-        AF.request(baseUrl,
+        AF.request("\(baseUrl)upcoming",
             method: .get,
             parameters: parameters).responseDecodable(of: BaseMovieDataResponseModel.self, completionHandler: { result in
 
@@ -37,10 +37,10 @@ class MovieAPINetwork {
         ProgressHUD.show()
 
         let parameters: [String: String] = [
-            "apiKey": apiKey
+            "api_key": apiKey
         ]
         
-        AF.request(baseUrl,
+        AF.request("\(baseUrl)now_playing",
             method: .get,
             parameters: parameters).responseDecodable(of: BaseMovieDataResponseModel.self, completionHandler: { result in
 
@@ -56,7 +56,7 @@ class MovieAPINetwork {
             ProgressHUD.show()
 
             let parameters: [String: String] = [
-                "apiKey": apiKey
+                "api_key": apiKey
             ]
             
             AF.request("\(baseUrl)\(id)",
