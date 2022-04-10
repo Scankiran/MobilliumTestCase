@@ -39,7 +39,7 @@ class NowPlayingCollectionViewCell: BaseCollectionViewCell {
     func handleTaps(movieId: Int?) {
         if let id = movieId {
             self.mContentView.onTap { _ in
-                self.outputDelegate?.movieTapped(movieID: movieId)
+                self.outputDelegate?.movieTapped(movieID: id)
             }
         }
         

@@ -8,20 +8,25 @@
 import UIKit
 
 protocol TableViewDataSourceOutputDelegate: AnyObject {
-    func openMovieDetailPage(with imdbID:String)
+    func openMovieDetailPage(with ID:Int)
 }
 
 class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    private var baseMovieModelData: [BaseMovieModel] = []
+    private var playingNowMovieData: [BaseMovieModel] = []
+    private var upComingMovieData: [BaseMovieModel] = []
     private weak var outputDelegate: TableViewDataSourceOutputDelegate? = nil
 
     init(outputDelegate: TableViewDataSourceOutputDelegate) {
         self.outputDelegate = outputDelegate
     }
 
-    func updateDataSource(baseMovieModelData: [BaseMovieModel]) {
-        self.baseMovieModelData = baseMovieModelData
+    func updateDataSource(playingNowMovieData: [BaseMovieModel]) {
+        self.playingNowMovieData = playingNowMovieData
+    }
+    
+    func updateDataSource(upComingMovieData: [BaseMovieModel]) {
+        self.upComingMovieData = upComingMovieData
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,22 +34,48 @@ class TableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return baseMovieModelData.count
+        return upComingMovieData.count + playingNowMovieData.count
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0, !playingNowMovieData.isEmpty {
+            let cell = tableView.generateReusableCell(SliderTableViewCell.self, indexPath: indexPath)
+            cell.outputDelegate = self
+            cell.configureView(nowPlayingMovieData: playingNowMovieData)
+            return cell
+        }
         
-        
-        return UITableViewCell()
+        let cell = tableView.generateReusableCell(MovieTableCell.self, indexPath: indexPath)
+        cell.outputDelegate = self
+        cell.configureView(baseMovieModel: upComingMovieData[indexPath.row])
+        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        if indexPath.row == 0 {
+            return SliderTableViewCell.defaultHeight
+        }
+        
+        return MovieTableCell.defaultHeight
     }
 
 }
 
 // MARK: BaseMovieInformationCellOutputDelegate
-extension TableViewDataSource {
+extension TableViewDataSource: SliderTableViewCellOutputDelegate, MovieTableCellOutputDelegate {
+    func sliderMovieTapped(movieId: Int) {
+        self.outputDelegate?.openMovieDetailPage(with: movieId)
+    }
     
+    func movieTapped(id: Int) {
+        self.outputDelegate?.openMovieDetailPage(with: id)
+    }
+    
+}
+
+
+enum DataType {
+    case playingNow
+    case upcoming
 }

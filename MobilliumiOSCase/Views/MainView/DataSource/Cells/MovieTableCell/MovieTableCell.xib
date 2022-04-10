@@ -57,6 +57,7 @@
                             <constraint firstAttribute="height" constant="20" id="yTh-S3-vts"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" backgroundImage="Arrow_Icon"/>
                     </button>
                 </subviews>
                 <constraints>
@@ -77,6 +78,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="buttonOpenMovieDetail" destination="FlH-Jy-ym4" id="8TX-TZ-D6k"/>
                 <outlet property="imageViewMoviePoster" destination="U6X-Rt-r7g" id="h95-rg-VOD"/>
                 <outlet property="labelMovieDate" destination="f8W-Ev-yCe" id="UdA-fG-jSl"/>
                 <outlet property="labelMovieOverview" destination="8ug-Qu-Nw8" id="GOv-af-o05"/>
@@ -85,4 +87,7 @@
             <point key="canvasLocation" x="131.15942028985509" y="129.91071428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Arrow_Icon" width="12" height="12"/>
+    </resources>
 </document>

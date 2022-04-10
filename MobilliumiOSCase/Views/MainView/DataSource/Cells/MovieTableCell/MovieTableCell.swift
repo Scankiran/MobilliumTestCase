@@ -22,9 +22,10 @@ class MovieTableCell: BaseTableViewCell {
     @IBOutlet private weak var labelMovieTitle: UILabel!
     @IBOutlet private weak var labelMovieOverview: UILabel!
     @IBOutlet private weak var labelMovieDate: UILabel!
+    @IBOutlet private weak var buttonOpenMovieDetail: UIButton!
     
     private let activityIndicator = UIActivityIndicatorView()
-    weak var outputDelegate: NowPlayingCollectionViewCellOutputDelegate?
+    weak var outputDelegate: MovieTableCellOutputDelegate?
     
     func configureView(baseMovieModel: BaseMovieModel) {
         
@@ -50,7 +51,11 @@ private extension MovieTableCell {
     func handleTap(movieId: Int?) {
         if let movieId = movieId {
             self.contentView.onTap { _ in
-                self.outputDelegate?.movieTapped(movieID: movieId)
+                self.outputDelegate?.movieTapped(id: movieId)
+            }
+            
+            self.buttonOpenMovieDetail.onTap { _ in
+                self.outputDelegate?.movieTapped(id: movieId)
             }
         }
         
