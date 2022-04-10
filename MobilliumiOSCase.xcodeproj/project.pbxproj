@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C9236EB2803110600754E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9236EA2803110600754E2E /* AppDelegate.swift */; };
-		2C9236ED2803110600754E2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9236EC2803110600754E2E /* SceneDelegate.swift */; };
 		2C9236EF2803110600754E2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9236EE2803110600754E2E /* ViewController.swift */; };
-		2C9236F22803110600754E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9236F02803110600754E2E /* Main.storyboard */; };
 		2C9236F42803110900754E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9236F32803110900754E2E /* Assets.xcassets */; };
 		2C9236F72803110900754E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9236F52803110900754E2E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +16,7 @@
 /* Begin PBXFileReference section */
 		2C9236E72803110600754E2E /* MobilliumiOSCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilliumiOSCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9236EA2803110600754E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C9236EC2803110600754E2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C9236EE2803110600754E2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C9236F12803110600754E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C9236F32803110900754E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9236F62803110900754E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9236F82803110900754E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,61 @@
 		2C9236E92803110600754E2E /* MobilliumiOSCase */ = {
 			isa = PBXGroup;
 			children = (
-				2C9236EA2803110600754E2E /* AppDelegate.swift */,
-				2C9236EC2803110600754E2E /* SceneDelegate.swift */,
-				2C9236EE2803110600754E2E /* ViewController.swift */,
-				2C9236F02803110600754E2E /* Main.storyboard */,
-				2C9236F32803110900754E2E /* Assets.xcassets */,
-				2C9236F52803110900754E2E /* LaunchScreen.storyboard */,
-				2C9236F82803110900754E2E /* Info.plist */,
+				2C9236FE2803126700754E2E /* Application */,
+				2C9236FF2803126D00754E2E /* Resources */,
+				2C9237012803127900754E2E /* Data */,
+				2C9237022803128E00754E2E /* Views */,
+				2C9237042803129A00754E2E /* Extensions */,
+				2C9237032803129600754E2E /* Components */,
 			);
 			path = MobilliumiOSCase;
+			sourceTree = "<group>";
+		};
+		2C9236FE2803126700754E2E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2C9236EA2803110600754E2E /* AppDelegate.swift */,
+				2C9236F82803110900754E2E /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2C9236FF2803126D00754E2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C9236F32803110900754E2E /* Assets.xcassets */,
+				2C9236F52803110900754E2E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C9237012803127900754E2E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2C9237022803128E00754E2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C9236EE2803110600754E2E /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C9237032803129600754E2E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2C9237042803129A00754E2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +169,6 @@
 			files = (
 				2C9236F72803110900754E2E /* LaunchScreen.storyboard in Resources */,
 				2C9236F42803110900754E2E /* Assets.xcassets in Resources */,
-				2C9236F22803110600754E2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +181,12 @@
 			files = (
 				2C9236EF2803110600754E2E /* ViewController.swift in Sources */,
 				2C9236EB2803110600754E2E /* AppDelegate.swift in Sources */,
-				2C9236ED2803110600754E2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C9236F02803110600754E2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C9236F12803110600754E2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C9236F52803110900754E2E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,10 +323,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MobilliumiOSCase/Info.plist;
+				INFOPLIST_FILE = MobilliumiOSCase/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +351,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X47F9FWXY7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MobilliumiOSCase/Info.plist;
+				INFOPLIST_FILE = MobilliumiOSCase/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +366,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
