@@ -5,40 +5,45 @@
 //  Created by Said Çankıran on 10.04.2022.
 //
 
-import Foundation
+import UIKit
 
 
 class MainViewModel {
 
     // MARK: Private Properties
     private let movieNetwork = MovieAPINetwork()
+    private var playingNowData: [BaseMovieModel] = []
+    private var upcomingData: [BaseMovieModel] = []
 
     //MARK: Closures
     var sendDataToView: (([BaseMovieModel], [BaseMovieModel]) -> ())?
 
-    func getMovieDatas() {
+    func getMovieDatas(isRefresh: Bool, pageCount: Int) {
         let dispatchGroup = DispatchGroup()
-        var playingNowData: [BaseMovieModel] = []
-        var upcomingData: [BaseMovieModel] = []
-        
+
+
         dispatchGroup.enter()
-        movieNetwork.getPlayingNow { responseModel in
+        movieNetwork.getPlayingNow { [weak self] responseModel in
             if let movieData = responseModel.results {
-                playingNowData = movieData
+                self?.playingNowData = movieData
             }
             dispatchGroup.leave()
         }
-        
+
         dispatchGroup.enter()
-        movieNetwork.getUpComingMovies { responseModel in
+        movieNetwork.getUpComingMovies(pageCount: pageCount) { [weak self] responseModel in
             if let movieData = responseModel.results {
-                upcomingData = movieData
+                if isRefresh {
+                    self?.upcomingData = movieData
+                } else {
+                    self?.upcomingData.append(contentsOf: movieData)
+                }
             }
             dispatchGroup.leave()
         }
 
         dispatchGroup.notify(queue: .main) {
-            self.sendDataToView?(playingNowData, upcomingData)
+            self.sendDataToView?(self.playingNowData, self.upcomingData)
         }
     }
 }

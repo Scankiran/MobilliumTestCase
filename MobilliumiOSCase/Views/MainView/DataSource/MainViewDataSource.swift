@@ -9,6 +9,7 @@ import UIKit
 
 protocol TableViewDataSourceOutputDelegate: AnyObject {
     func openMovieDetailPage(with ID:Int)
+    func fetchNextPageData(pageCount: Int)
 }
 
 class MainViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
@@ -16,6 +17,7 @@ class MainViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var playingNowMovieData: [BaseMovieModel] = []
     private var upComingMovieData: [BaseMovieModel] = []
     private weak var outputDelegate: TableViewDataSourceOutputDelegate? = nil
+    private var pageCount = 1
 
     init(outputDelegate: TableViewDataSourceOutputDelegate) {
         self.outputDelegate = outputDelegate
@@ -52,6 +54,12 @@ class MainViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.generateReusableCell(MovieTableCell.self, indexPath: indexPath)
         cell.outputDelegate = self
         cell.configureView(baseMovieModel: upComingMovieData[indexPath.row - 1])
+        
+        if indexPath.row == upComingMovieData.count - 4 {
+            pageCount += 1
+            self.outputDelegate?.fetchNextPageData(pageCount: pageCount)
+        }
+        
         return cell
     }
 

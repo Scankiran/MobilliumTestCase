@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
             self?.refreshControl.endRefreshing()
         }
         
-        viewModel.getMovieDatas()
+        viewModel.getMovieDatas(isRefresh: false, pageCount: 1)
     }
 
 
@@ -61,7 +61,7 @@ private extension MainViewController {
     }
 
     @objc func refresh(_ sender: AnyObject) {
-        viewModel.getMovieDatas()
+        viewModel.getMovieDatas(isRefresh: true, pageCount: 1)
     }
 }
 
@@ -71,6 +71,10 @@ extension MainViewController: TableViewDataSourceOutputDelegate {
         movieDetailViewController.setMovieIdToViewModel(movieId: ID)
         movieDetailViewController.modalPresentationStyle = .fullScreen
         self.present(movieDetailViewController, animated: true, completion: nil)
+    }
+    
+    func fetchNextPageData(pageCount: Int) {
+        viewModel.getMovieDatas(isRefresh: false, pageCount: pageCount)
     }
 
 }
